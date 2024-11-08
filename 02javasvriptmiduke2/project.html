@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .allcircle{
+            display: flex;
+            justify-content: space-between;
+        }
+        .cr1{
+            width: 200px;
+            height: 100px;
+            border: 2px,black,solid;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="allcircle ">
+        <P class=" cr1" id="red"></P>
+        <P class=" cr1" id="yellow"></P>
+        <P class=" cr1" id="green"></P>
+       </div>
+       <button>click for move</button>
+    
+</body>
+<script>
+    let butt =document.querySelectorAll('.cr1')
+    console.log(butt);
+    let bt=document.querySelector("button")
+    console.log(bt);
+       function changre(){
+        bt.addEventListener(click,function(e){
+              console.log(e.tartget);
+              switch  (e.target.id)
+              cas
+        })
+
+       }
+</script>
+</html>

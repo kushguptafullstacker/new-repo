@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    ,
+    
+</head>
+<body style="background-color:darkslategrey;color: aliceblue;">
+    <ul id="images">
+      <li><img style="width: 200px; height: 200px;" id="first" src="https://images.pexels.com/photos/175695/pexels-photo-175695.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+      <li><img style="width: 200px; height: 200px;" id="second"  src="https://images.pexels.com/photos/340991/pexels-photo-340991.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+
+     
+      <li><img style="width: 200px; height: 200px;" id="third"  src="https://images.pexels.com/photos/690746/pexels-photo-690746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"alt="" ></li>
+
+      <li><img style="width: 200px; height: 200px;" id="fourth"  src="https://images.pexels.com/photos/303349/pexels-photo-303349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""></li>
+
+      <li> <a style="color: aliceblue;" href="https://wavedesign.in" id="fifth">wavedesigncompany</a> </li>
+
+
+   
+
+
+
+    </ul>
+</body>
+<script>
+      document.getElementById('images').addEventListener ('click',function(e)
+      {console.log("images clicked");
+     })
+    
+    document.getElementById('third').addEventListener('click' ,function(e)
+    { console.log("picture clikcked");
+     e.stopPropagation();
+     })
+
+     document.getElementById('fifth').addEventListener('click', function(e){console.log("url clicked of wave design");
+     e.preventDefault()
+    e.stopPropagation()})
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeit=e.target.parentNode
+             removeit.remove()
+        }
+        
+    })
+
+
+
+</script>
+</html>

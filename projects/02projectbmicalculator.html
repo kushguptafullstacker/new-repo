@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .button{
+    padding: 10px;
+    font-size: 1rem;
+    border:0px;
+    background-color: rgb(219, 134, 134);
+    color: white;
+   }
+   .weightguide{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+   }
+   .container{
+    justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+   }
+
+
+
+
+
+
+    </style>
+</head>
+<body style="background-color: grey;">
+        <div class="container">
+       <h1 class="BMI CALCULATOY">BMI CALCULATOR</h1>
+       <form>
+        <p><label>height in cm</label><input type="text" id="height" /></p>
+        <p><label>weight in kg</label><input type="text" id="weight" /></p>
+     <button class="button">calcualte</button>
+     
+     </form>
+     <div class="result"></div>
+       </div>
+       <div class="weightguide">
+       <h1>BMI WEIGHT GUIDE </h1>
+        <p>under weeight guide =less than 18.6</p>
+        <p>Normaol range = 18.6 and 24.9 </p>
+        <p>overweight =24.9 </p>
+
+    </div>
+
+    <script>
+        console.log("kush");
+ const form=document.querySelector('form')
+ console.log(form);
+ const result=document.querySelector('.result')
+ console.log(result);
+ form.addEventListener('submit',function(e){
+    e.preventDefault()
+
+ 
+    
+const height=parseFloat(document.querySelector('#height').value)
+const weight=parseFloat(document.querySelector('#weight').value)
+
+    if(height==="" || height < 0 || isNaN(height)) {
+        result.innerHTML=`tmkc height. shii bhr ${height}`
+     }
+     else if (weight==="" || weight < 0 || isNaN(weight)) {
+        result.innerHTML=`tmkc weight. shii bhr ${weight}`;
+        
+     }
+     else{
+       const value= (weight /((height*height)/10000)).toFixed(2);
+       result.innerHTML=`<span>${value}</span>`
+     }
+    
+ })
+    </script>
+
+</body>
+</html>
